@@ -77,7 +77,7 @@ function ToggleComponent() {
             exit={{ opacity: 0 }}
           >
             <BlurFadeTransition />
-            <YourComponent />
+            {/* <YourComponent /> */}
           </motion.div>
         )}
       </AnimatePresence>
