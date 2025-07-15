@@ -16,7 +16,7 @@ const links = [
 
 const MobileNav = () => {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false); // ✅ required for Sheet
+  const [open, setOpen] = useState(false);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -27,9 +27,9 @@ const MobileNav = () => {
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
 
-      <SheetContent className="flex flex-col">
+      <SheetContent className="flex flex-col justify-between">
         {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
+        <div className="mt-32 mb-28 text-center text-2xl">
           <Link href="/" onClick={() => setOpen(false)}>
             <h1 className="text-4xl font-semibold">
               Gaurav<span className="text-accent">.</span>
@@ -43,7 +43,7 @@ const MobileNav = () => {
             <Link
               href={link.path}
               key={index}
-              onClick={() => setOpen(false)} // ✅ closes menu after click
+              onClick={() => setOpen(false)} // closes menu after click
               className={`${
                 link.path === pathname &&
                 "text-accent border-b-2 border-accent"

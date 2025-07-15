@@ -11,21 +11,18 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-0 xl:pb-8">
           {/* text */}
-          <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl text-white/60">Software Developer</span>
-            <h1 className="h2 text-6xl mb-6">
+          <div className="text-center xl:text-left order-2 xl:order-none px-4">
+            <span className="text-sm sm:text-base text-white/60 block mb-2">Software Developer</span>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Hello I&apos;m <br />{" "}
               <span className="text-accent">Gaurav Sonawane</span>
             </h1>
-            <span className="text-xl text-white/60 py-3">Tech Tamer</span>
-            <span className="text-xl text-white/60 py-3 block mb-4">
+            <span className="text-base sm:text-lg text-white/60 block mb-1">Tech Tamer</span>
+            <span className="text-base sm:text-lg text-white/60 block mb-1">
               Converts air into code
             </span>{" "}
             <br />
-            {/* <p className="max-w-[500px] mb-9 text-white/80">
-              I am proficient in various programming languages and technologies
-              having strong command on basics
-            </p> */}
+
             {/* Button and Socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a
