@@ -88,6 +88,7 @@
   } */
   body {
     @apply font-primary bg-primary text-white leading-loose;
+    overflow-x: hidden;
   }
   .h1 {
     @apply text-[48px] xl:text-[72px] leading-[1.1] font-semibold;

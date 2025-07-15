@@ -92,33 +92,37 @@ const Projects = () => {
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[20px] h-[50%]">
               {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-hollow text-outline">
+              <div className="text-4xl md:text-6xl xl:text-8xl leading-tight font-extrabold text-hollow text-outline">
                 {project.num}
               </div>
 
+              {/* project title */}
+              <h2 className="text-2xl md:text-3xl xl:text-[42px] font-bold leading-tight text-white group-hover:text-accent transition-all duration-500 capitalize">
+                {project.title}
+              </h2>
+
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              <h2 className="text-lg md:text-xl xl:text-2xl font-semibold leading-tight text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {project.category} project
               </h2>
 
               {/* project description */}
-              <p className="text-white/60">{project.description}</p>
+              <p className="text-sm md:text-base xl:text-white/60 text-white/60 leading-snug md:leading-normal">
+                {project.description}
+              </p>
 
               {/* project stack */}
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li key={index} className="text-xl text-accent">
-                      {item.name}
-                      {/* removal of last comma */}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
-                  );
-                })}
+              <ul className="flex flex-wrap gap-1 md:gap-2 max-w-full overflow-hidden break-words text-sm md:text-base">
+                {project.stack.map((item, index) => (
+                  <li key={index} className="text-base text-accent">
+                    {item.name}
+                    {index !== project.stack.length - 1 && ","}
+                  </li>
+                ))}
               </ul>
 
               {/* border */}
-              <div className="border border-white/20"></div>
+              <div className="border border-white/20 my-1"></div>
 
               {/* buttons */}
               <div className="flex items-center gap-5">
@@ -162,7 +166,7 @@ const Projects = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-[240px] md:h-[300px] xl:h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                       {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/* image */}
@@ -181,8 +185,8 @@ const Projects = () => {
               {/* slider buttons */}
               <WorkSliderBtns
                 containerStyles="flex justify-between gap-4 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full xl:w-max xl:justify-between"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[40px] h-[40px] rounded-lg flex justify-center items-center transition-all"
-                iconStyles="text-white text-2xl"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[18px] w-[32px] h-[32px] md:w-[36px] md:h-[36px] xl:w-[40px] xl:h-[40px] rounded-lg flex justify-center items-center transition-all"
+                iconStyles="text-white text-xl md:text-[22px] xl:text-2xl"
               />
             </Swiper>
           </div>

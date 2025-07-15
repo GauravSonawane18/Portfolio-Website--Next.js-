@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
+import { sectionWrap } from "@/utilities/container";
 import {
   Select,
   SelectContent,
@@ -46,7 +46,7 @@ const Contact = () => {
       }}
       className="py-6"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 overflow-hidden">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:h-[54%] order-2 xl:order-none">
@@ -85,20 +85,20 @@ const Contact = () => {
             </form>
           </div>
           {/* info */}
-          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-            <ul className="flex flex-col gap-10">
-              <h3 className="text-2xl text-accent ">Contact Me</h3>
-              {info.map((item, index) => {
-                return <li key={index} className="flex items-center gap-6">
-                  <div className="w-[44px] h-[44px] xl:w-[56px] xl:h-[56px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
-                    <div className="text-[24px]">{item.icon}</div>
+          <div className="flex-1 w-full flex items-start xl:justify-end order-1 xl:order-none mb-8 xl:mb-0 overflow-hidden">
+            <ul className="flex flex-col gap-6 w-full max-w-[400px] px-2">
+              <h3 className="text-xl sm:text-2xl text-accent">Contact Me</h3>
+              {info.map((item, index) => (
+                <li key={index} className="flex items-start gap-4">
+                  <div className="min-w-[40px] h-[40px] sm:min-w-[44px] sm:h-[44px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
+                    <div className="text-[20px]">{item.icon}</div>
                   </div>
-                  <div className="flex-1">
-                    <p className="text-white/60 text-sm xl:text-md">{item.title}</p>
-                    <h3 className="text-lg xl:text-xl">{item.description}</h3>
+                  <div className="flex-1 overflow-hidden">
+                    <p className="text-white/60 text-sm">{item.title}</p>
+                    <h3 className="text-base break-words">{item.description}</h3>
                   </div>
                 </li>
-              })}
+              ))}
             </ul>
           </div>
         </div>
