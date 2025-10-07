@@ -21,7 +21,7 @@ const projects = [
     category: "Machine Learning",
     title: "Movie Recommender System",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut nostrum consectetur laborum esse fugit omnis. Voluptates, ipsa laborum.",
+      "Built a content-based movie recommender with an interactive UI using Python and Streamlit. The model, using the TMDB 10k dataset, leverages cosine similarity from Scikit-Learn to find and suggest similar movies. The app dynamically fetches movie posters via the TMDB API to provide a visually engaging experience.",
     stack: [
       { name: "Python" },
       { name: "Streamlit" },
@@ -30,7 +30,7 @@ const projects = [
     ],
     image: "/assets/work/thumb1.png",
     live: " ",
-    github: " ",
+    github: "https://github.com/GauravSonawane18/Movie-Recommender-System-ML-project.git",
   },
 
   {
