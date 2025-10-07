@@ -7,10 +7,10 @@ import {
   SiMysql,
   SiPostgresql,
   SiPostman,
-  SiNumpy,
   SiScikitlearn,
   SiPandas,
-  SiTensorflow,
+  SiJavascript,
+  SiReact,
 } from "react-icons/si";
 
 import { Tabs, TabsContent } from "@/components/ui/tabs";
@@ -29,9 +29,9 @@ const skills = {
   skillList: [
     { icon: <FaJava />, name: "Java" },
     { icon: <FaPython />, name: "Python" },
-    { icon: <SiNumpy />, name: "Numpy" },
+    { icon: <SiJavascript />, name: "JavaScript" },
     { icon: <SiMysql />, name: "MySQL" },
-    { icon: <SiTensorflow />, name: "TensorFlow" },
+    { icon: <SiReact />, name: "React" },
     { icon: <SiTailwindcss />, name: "TailwindCSS" },
     { icon: <SiPostgresql />, name: "Postgresql" },
     { icon: <SiPostman />, name: "Postman" },
